@@ -113,14 +113,14 @@ public class ItemValidatorService {
                 if (itemRequestInformation.getRequestType().equalsIgnoreCase(RecapCommonConstants.REQUEST_TYPE_RETRIEVAL) || itemRequestInformation.getRequestType().equalsIgnoreCase(RecapCommonConstants.REQUEST_TYPE_RECALL)) {
                     int validateCustomerCode = checkDeliveryLocation(itemEntity.getCustomerCode(), itemRequestInformation);
                     if (validateCustomerCode == 1) {
-                        responseEntity1 = new ResponseEntity(ReCAPConstants.VALID_REQUEST, getHttpHeaders(), HttpStatus.OK);
+                        responseEntity1 = new ResponseEntity(RecapCommonConstants.VALID_REQUEST, getHttpHeaders(), HttpStatus.OK);
                     } else if (validateCustomerCode == 0) {
                         responseEntity1 = new ResponseEntity(ReCAPConstants.INVALID_CUSTOMER_CODE, getHttpHeaders(), HttpStatus.BAD_REQUEST);
                     } else if (validateCustomerCode == -1) {
                         responseEntity1 = new ResponseEntity(ReCAPConstants.INVALID_DELIVERY_CODE, getHttpHeaders(), HttpStatus.BAD_REQUEST);
                     }
                 } else {
-                    responseEntity1 = new ResponseEntity(ReCAPConstants.VALID_REQUEST, getHttpHeaders(), HttpStatus.OK);
+                    responseEntity1 = new ResponseEntity(RecapCommonConstants.VALID_REQUEST, getHttpHeaders(), HttpStatus.OK);
                 }
                 return responseEntity1;
             } else {
@@ -136,7 +136,7 @@ public class ItemValidatorService {
             }
             return multipleRequestItemValidation(itemEntityList, bibliographicIds, itemRequestInformation);
         }
-        return new ResponseEntity(ReCAPConstants.VALID_REQUEST, getHttpHeaders(), HttpStatus.OK);
+        return new ResponseEntity(RecapCommonConstants.VALID_REQUEST, getHttpHeaders(), HttpStatus.OK);
     }
 
     private List<ItemEntity> getItemEntities(List<String> itemBarcodes) {
@@ -197,7 +197,7 @@ public class ItemValidatorService {
                             if (!bibliographicIds.contains(bibliographicId)) {
                                 return new ResponseEntity(ReCAPConstants.ITEMBARCODE_WITH_DIFFERENT_BIB, getHttpHeaders(), HttpStatus.BAD_REQUEST);
                             } else {
-                                status = ReCAPConstants.VALID_REQUEST;
+                                status = RecapCommonConstants.VALID_REQUEST;
                             }
                         }
                     } else {

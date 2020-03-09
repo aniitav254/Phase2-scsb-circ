@@ -10,7 +10,6 @@ public final class ReCAPConstants {
 
     public static final String GFA = "GFA";
 
-    public static final String REGEX_FOR_EMAIL_ADDRESS = "^[A-Za-z0-9+_.-]+@(.+)$";
     public static final String INVALID_REQUEST_INSTITUTION = "Please enter valid Institution PUL/CUL/NYPL for requestingInstitution";
     public static final String INVALID_EMAIL_ADDRESS = "Please enter valid emailAddress";
     public static final String START_PAGE_AND_END_PAGE_REQUIRED = "Start page and end page required.";
@@ -18,7 +17,6 @@ public final class ReCAPConstants {
     public static final String INVALID_REQUEST_TYPE = "Please enter the valid request type";
     public static final String EDD_REQUEST = "EDD";
     public static final String REFILED_REQUEST = "REFILED";
-    public static final String VALID_REQUEST = "All request parameters are valid.Patron is eligible to raise a request";
     public static final String INVALID_PATRON = "Patron not on file in ILS";
     public static final String ITEMBARCODE_WITH_DIFFERENT_BIB = "All items must be attached to the same bibliographic record, have the same customer code, and the same availability.";
     public static final String INVALID_CUSTOMER_CODE = "Please enter the valid delivery Code";
@@ -119,8 +117,6 @@ public final class ReCAPConstants {
     public static final String REQUEST_ITEM_NYPL_RECALL_TOPIC = "RequestItem-nyplRecallTopic";
     public static final String REQUEST_ITEM_NYPL_BORROW_DIRECT_TOPIC = "RequestItem-nyplBorrowDirectTopic";
 
-    public static final String FILE_NAME = "FileName";
-
     public static final String FORMAT_MARC = "marc";
     public static final String FORMAT_SCSB = "scsb";
 
@@ -128,10 +124,8 @@ public final class ReCAPConstants {
 
     public static final String SUBMIT_COLLECTION_COMPLETION_QUEUE_FROM = "scsbactivemq:queue:submitCollectionCompletionFromQueue";
     public static final String SUBMIT_COLLECTION_COMPLETION_QUEUE_TO = "scsbactivemq:queue:submitCollectionCompletionToQueue";
-    public static final String CAMEL_BATCH_COMPLETE = "CamelBatchComplete";
     public static final String PROCESS = "process";
     public static final String SEND_EMAIL_FOR_EMPTY_DIRECTORY = "sendEmailForEmptyDirectory";
-
 
     public static final String ITEM_STATUS_AVAILABLE = "Available";
     public static final String INVALID_SCSB_XML_FORMAT_MESSAGE = "Invalid SCSB xml format";
@@ -153,7 +147,6 @@ public final class ReCAPConstants {
     public static final String REQUEST_ITEM_CANCEL_ITEM_AVAILABILITY_STATUS = "RequestItemCancel";
     public static final String REQUEST_ITEM_INSERT = "Request Item Insert";
     public static final String RETRIVAL_ORDER_NOT_REQUIRED_FOR_RECALL = "Retrival order not required for recall";
-
 
     public static final String REQUEST_ITEM_AVAILABILITY_STATUS_DATA_UPDATE = "1 - 2";
     public static final String REQUEST_ITEM_AVAILABILITY_STATUS_DATA_ROLLBACK = "2 - 1";
@@ -217,7 +210,7 @@ public final class ReCAPConstants {
     public static final String GFA_STATUS_VER_ON_RET_WORK_ORDER = "VER ON RET WO:";
     public static final String GFA_STATUS_VER_ON_WORK_ORDER = "VER ON WO:";
     public static final String CANNOT_REFILE_FIRST_SCAN_REQUEST ="Cannot place recall for requests placed on first scan LAS status";
-     public static final String REQUESTS_STUCK_IN__PENDING = "Requests stuck in pending";
+    public static final String REQUESTS_STUCK_IN__PENDING = "Requests stuck in pending";
     public static final String NO_PENDING_REQUESTS_FOUND = "There are no pending requests or no new pending request";
 
     protected static final List<String> GFA_STATUS_AVAILABLE_LIST = Arrays.asList(GFA_STATUS_INCOMING_ON_WORK_ORDER, GFA_STATUS_REACC_ON_WORK_ORDER, GFA_STATUS_VER_ON_REFILE_WORK_ORDER, GFA_STATUS_IN);

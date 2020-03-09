@@ -1296,7 +1296,7 @@ public class ItemRequestService {
             new BufferedReader(new StringReader(notes)).lines().forEach(line -> itemRequestServiceUtil.setEddInfoToScsbRequest(line, itemRequestInformation));
 
             String validationMessage = validateItemRequest(itemRequestInformation);
-            if (!ReCAPConstants.VALID_REQUEST.equals(validationMessage)) {
+            if (!RecapCommonConstants.VALID_REQUEST.equals(validationMessage)) {
                 return RecapCommonConstants.FAILURE + " : " + validationMessage;
             }
 
@@ -1344,7 +1344,7 @@ public class ItemRequestService {
             itemRequestInformation.setTitleIdentifier(searchResultRow.getTitle());
 
             String validationMessage = validateItemRequest(itemRequestInformation);
-            if (!ReCAPConstants.VALID_REQUEST.equals(validationMessage)) {
+            if (!RecapCommonConstants.VALID_REQUEST.equals(validationMessage)) {
                 return RecapCommonConstants.FAILURE + ":" + validationMessage;
             }
 

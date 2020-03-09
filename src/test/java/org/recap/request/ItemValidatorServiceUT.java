@@ -62,7 +62,7 @@ public class ItemValidatorServiceUT extends BaseTestCase{
         itemRequestInformation.setRequestType(RecapCommonConstants.RETRIEVAL);
         ResponseEntity responseEntity = itemValidatorService.itemValidation(itemRequestInformation);
         assertNotNull(responseEntity);
-        assertEquals("Item Validation ",ReCAPConstants.VALID_REQUEST,responseEntity.getBody());
+        assertEquals("Item Validation ",RecapCommonConstants.VALID_REQUEST,responseEntity.getBody());
     }
 
     @Test

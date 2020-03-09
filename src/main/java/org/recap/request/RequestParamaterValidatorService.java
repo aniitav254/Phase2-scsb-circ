@@ -107,7 +107,7 @@ public class RequestParamaterValidatorService {
         boolean bSuccess = false;
         try {
             if (!StringUtils.isEmpty(toEmailAddress)) {
-                String regex = ReCAPConstants.REGEX_FOR_EMAIL_ADDRESS;
+                String regex = RecapCommonConstants.REGEX_FOR_EMAIL_ADDRESS;
                 Pattern pattern = Pattern.compile(regex);
                 Matcher matcher = pattern.matcher(toEmailAddress);
                 bSuccess = matcher.matches();

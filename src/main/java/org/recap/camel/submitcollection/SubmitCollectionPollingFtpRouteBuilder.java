@@ -89,7 +89,7 @@ public class SubmitCollectionPollingFtpRouteBuilder {
                                 --> "CamelCompleteBatch"-exchange property is used to indicate that all the files received are processed,
                                 when this condition is satisfied stopping route and starting next route processes are called.
                                 */
-                                .when(exchangeProperty(ReCAPConstants.CAMEL_BATCH_COMPLETE))
+                                .when(exchangeProperty(RecapCommonConstants.CAMEL_BATCH_COMPLETE))
                                     .log("OnCompletion executing for PUL cgd protected")
                                     .process(new StopRouteProcessor(ReCAPConstants.SUBMIT_COLLECTION_FTP_CGD_PROTECTED_PUL_ROUTE))
                                     //To wait for the shutdown of current route and then start the next route.
@@ -130,7 +130,7 @@ public class SubmitCollectionPollingFtpRouteBuilder {
                 public void configure() throws Exception {
                     onCompletion().parallelProcessing()
                             .choice()
-                                .when(exchangeProperty(ReCAPConstants.CAMEL_BATCH_COMPLETE))
+                                .when(exchangeProperty(RecapCommonConstants.CAMEL_BATCH_COMPLETE))
                                     .log("OnCompletion executing for PUL cgd not protected")
                                     .process(new StopRouteProcessor(ReCAPConstants.SUBMIT_COLLECTION_FTP_CGD_NOT_PROTECTED_PUL_ROUTE))
                                     .delay(10)
@@ -167,7 +167,7 @@ public class SubmitCollectionPollingFtpRouteBuilder {
                 public void configure() throws Exception {
                     onCompletion().parallelProcessing()
                             .choice()
-                                .when(exchangeProperty(ReCAPConstants.CAMEL_BATCH_COMPLETE))
+                                .when(exchangeProperty(RecapCommonConstants.CAMEL_BATCH_COMPLETE))
                                     .log("OnCompletion executing for CUL cgd protected")
                                     .process(new StopRouteProcessor(ReCAPConstants.SUBMIT_COLLECTION_FTP_CGD_PROTECTED_CUL_ROUTE))
                                     .delay(10)
@@ -204,7 +204,7 @@ public class SubmitCollectionPollingFtpRouteBuilder {
                 public void configure() throws Exception {
                     onCompletion().parallelProcessing()
                             .choice()
-                                .when(exchangeProperty(ReCAPConstants.CAMEL_BATCH_COMPLETE))
+                                .when(exchangeProperty(RecapCommonConstants.CAMEL_BATCH_COMPLETE))
                                     .log("OnCompletion executing for CUL cgd not protected")
                                     .process(new StopRouteProcessor(ReCAPConstants.SUBMIT_COLLECTION_FTP_CGD_NOT_PROTECTED_CUL_ROUTE))
                                     .delay(10)
@@ -241,7 +241,7 @@ public class SubmitCollectionPollingFtpRouteBuilder {
                 public void configure() throws Exception {
                     onCompletion().parallelProcessing()
                             .choice()
-                                .when(exchangeProperty(ReCAPConstants.CAMEL_BATCH_COMPLETE))
+                                .when(exchangeProperty(RecapCommonConstants.CAMEL_BATCH_COMPLETE))
                                     .log("OnCompletion executing for NYPL cgd protected")
                                     .process(new StopRouteProcessor(ReCAPConstants.SUBMIT_COLLECTION_FTP_CGD_PROTECTED_NYPL_ROUTE))
                                     .delay(10)
@@ -297,7 +297,7 @@ public class SubmitCollectionPollingFtpRouteBuilder {
                 public void configure() throws Exception {
                     onCompletion().parallelProcessing()
                             .choice()
-                                .when(exchangeProperty(ReCAPConstants.CAMEL_BATCH_COMPLETE))
+                                .when(exchangeProperty(RecapCommonConstants.CAMEL_BATCH_COMPLETE))
                                     .log("OnCompletion executing for NYPL cgd not protected")
                                     .process(new StopRouteProcessor(ReCAPConstants.SUBMIT_COLLECTION_FTP_CGD_NOT_PROTECTED_NYPL_ROUTE))
                                     .delay(10)

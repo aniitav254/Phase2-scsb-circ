@@ -84,7 +84,7 @@ public class DailyReconciliationRouteBuilder {
                             .end()
                             .onCompletion()
                             .choice()
-                            .when(exchangeProperty(ReCAPConstants.CAMEL_BATCH_COMPLETE))
+                            .when(exchangeProperty(RecapCommonConstants.CAMEL_BATCH_COMPLETE))
                             .log("Stopping DailyReconciliation Process")
                             .process(new StopRouteProcessor(ReCAPConstants.DAILY_RR_FTP_ROUTE_ID));
 
